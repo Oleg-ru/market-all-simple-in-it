@@ -5,22 +5,26 @@ import Header from "../../Header/Header.jsx";
 import Content from "../../Content/Content.jsx";
 
 class Main extends React.Component {
-
-    state = {
-        activeTab: "shopping", //home | shopping | statistics
-    }
-    
-    setActiveTab = (activeTab) => {
-        this.setState({activeTab})
-    }
-
     render() {
+
+        const {
+            setActiveTab,
+            buyCard,
+            state: {
+                activeTab,
+                cash,
+                currentData,
+                cards,
+                buyCards,
+            }
+        } = this.props;
+
         return (
             <div className="main-container">
-                <Menu activeTab={this.state.activeTab} setActiveTab={this.setActiveTab}/>
+                <Menu activeTab={activeTab} setActiveTab={setActiveTab}/>
                 <div className="main-content">
-                    <Header />
-                    <Content activeTab={this.state.activeTab}/>
+                    <Header cash={cash} currentData={currentData}/>
+                    <Content buyCards={buyCards} activeTab={activeTab} cards={cards} buyCard={buyCard}/>
                 </div>
             </div>
         )

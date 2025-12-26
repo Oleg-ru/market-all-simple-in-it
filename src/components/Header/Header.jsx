@@ -6,22 +6,22 @@ import searchIcon from "../../assets/icons/search.svg"
 
 class Header extends React.Component {
 
-    cash = 19542;
-    currentData = new Date()
-
     render() {
+
+        const {cash ,currentData} = this.props;
+
         return (
             <div className="header-container">
                 <div className="header-avatar-container">
                     <img className="header-avatar-icon" src={avatarIcon} alt="avatar"/>
                     <div className="header-cash-container">
                         <div>Name</div>
-                        <div><b>{this.cash}</b></div>
+                        <div><b>{cash}</b></div>
                     </div>
                 </div>
                 <div className="header-control-container">
                     <div className="header-currentData">
-                        {this.currentData.toDateString()}
+                        {currentData.toDateString()}
                     </div>
                     <div className="header-search-container">
                         <img className="header-search-icon" src={searchIcon} alt=""/>

@@ -3,11 +3,23 @@ import Purchases from "../../../../Purchases/Purchases.jsx";
 import {Card} from "../../../../Card/Card.jsx";
 import "./Home.css"
 
-function Home(props) {
+function Home({buyCards, buyCard}) {
     return (
         <div className="home-container">
             <Purchases />
-            <Card />
+            {
+                buyCards.map(({id, cardName, price, isAdded}) => (
+                    <Card
+                        key={id}
+                        cardName={cardName}
+                        price={price}
+                        isAdded={isAdded}
+                        buyCard={() => {
+                            buyCard(id)
+                        }}
+                    />)
+                )
+            }
         </div>
     );
 }
