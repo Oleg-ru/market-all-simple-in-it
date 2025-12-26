@@ -1,14 +1,19 @@
 import React from "react";
 import "./Content.css"
-import Purchases from "../Purchases/Purchases.jsx";
-import {Card} from "../Card/Card.jsx";
+import Shopping from "../pages/Main/Tabs/Shopping/Shopping.jsx";
 
 class Content extends React.Component {
+
+    cards = [
+        {price: "5.99", cardName: "book"},
+        {price: "1100.00", cardName: "smartphone"},
+        {price: "1500.50", cardName: "laptop"},
+    ]
+
     render() {
         return (
             <div className="content-container">
-                <Purchases />
-                <Card />
+                <Shopping name="test" cards={this.cards}/>
             </div>
         )
     }
