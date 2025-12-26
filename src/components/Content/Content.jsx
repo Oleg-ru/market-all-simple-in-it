@@ -1,6 +1,8 @@
 import React from "react";
 import "./Content.css"
 import Shopping from "../pages/Main/Tabs/Shopping/Shopping.jsx";
+import Home from "../pages/Main/Tabs/Home/Home.jsx";
+import Statistics from "../pages/Main/Tabs/Statistics/Statistics.jsx";
 
 class Content extends React.Component {
 
@@ -25,10 +27,14 @@ class Content extends React.Component {
     }
 
     render() {
+        const {activeTab} = this.props;
+
         return (
             <div className="content-container">
-                <button onClick={this.addCard}>test</button>
-                <Shopping name="test" cards={this.state.cards}/>
+                {activeTab === "home" && <Home />}
+                {activeTab === "shopping" && <Shopping name="test" cards={this.state.cards}/>}
+                {activeTab === "statistics" && <Statistics />}
+
             </div>
         )
     }

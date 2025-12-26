@@ -7,36 +7,27 @@ import singoutIcon from "../../assets/icons/signout.svg"
 
 class Menu extends React.Component {
 
-    test = "test"
-
-    constructor(props) {
-        super(props);
-        
-        this.onMenuItemClick2 = () => {
-            console.log("click 2", this.test)
-        }
+    updateActiveTab = (tab) => () => {
+        this.props.setActiveTab(tab)
     }
 
-
-    onMenuItemClick() {
-        console.log("click 1", this.test)
-    }
-
-    onMenuItemClick3 = () => {
-        console.log("click 3", this.test)
+    getClassName = (tab) => {
+        return this.props.activeTab === tab
+            ? 'menu-item active'
+            : 'menu-item'
     }
 
     render() {
         return (
             <div className="menu-container">
                 <div className="menu-items">
-                    <div className="menu-item" onClick={this.onMenuItemClick.bind(this)}>
+                    <div className={this.getClassName("home")} onClick={this.updateActiveTab("home")}>
                         <img className="menu-item-icon" src={homeIcon} alt=""/>
                     </div>
-                    <div className="menu-item" onClick={this.onMenuItemClick2}>
+                    <div className={this.getClassName("shopping")} onClick={this.updateActiveTab("shopping")}>
                         <img className="menu-item-icon" src={shoppingIcon} alt=""/>
                     </div>
-                    <div className="menu-item" onClick={this.onMenuItemClick3}>
+                    <div className={this.getClassName("statistics")} onClick={this.updateActiveTab("statistics")}>
                         <img className="menu-item-icon" src={statisticsIcon} alt=""/>
                     </div>
                 </div>
