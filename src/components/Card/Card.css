@@ -5,8 +5,15 @@
     padding: 1em;
     border-radius: 1em;
     color: white;
-    background: var(--orange-gradient);
     position: relative;
+}
+
+.card-orange-background {
+    background: var(--orange-gradient);
+}
+
+.card-violet-background {
+    background: var(--violet-gradient);
 }
 
 .card-price {
@@ -28,4 +35,13 @@
     width: 2em;
     filter: invert(1);
     position: absolute;
+}
+
+.card-add-icon {
+    width: 1.3em;
+    cursor: pointer;
+    filter: invert(1);
+    position: absolute;
+    top: 0.5em;
+    right: 1em;
 }
