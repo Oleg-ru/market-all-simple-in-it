@@ -4,7 +4,7 @@ class Authorizition extends Component {
     render() {
         return (
             <div>
-                Authorizition
+                Authorizition component
             </div>
         );
     }
