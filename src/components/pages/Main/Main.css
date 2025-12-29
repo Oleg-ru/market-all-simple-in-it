@@ -10,3 +10,11 @@
     width: 100%;
     gap: 1em;
 }
+
+.main-window {
+    width: 90%;
+    height: 90%;
+    background: white;
+    border-radius: 1em;
+    box-shadow: 2px 2px 9px #a3a3a3;
+}

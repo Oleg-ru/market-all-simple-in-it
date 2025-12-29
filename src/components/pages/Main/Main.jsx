@@ -20,11 +20,13 @@ class Main extends React.Component {
         } = this.props;
 
         return (
-            <div className="main-container">
-                <Menu activeTab={activeTab} setActiveTab={setActiveTab}/>
-                <div className="main-content">
-                    <Header cash={cash} currentData={currentData}/>
-                    <Content buyCards={buyCards} activeTab={activeTab} cards={cards} buyCard={buyCard}/>
+            <div className="main-window">
+                <div className="main-container">
+                    <Menu activeTab={activeTab} setActiveTab={setActiveTab}/>
+                    <div className="main-content">
+                        <Header cash={cash} currentData={currentData}/>
+                        <Content buyCards={buyCards} activeTab={activeTab} cards={cards} buyCard={buyCard}/>
+                    </div>
                 </div>
             </div>
         )

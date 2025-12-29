@@ -1,13 +1,13 @@
 import React, {Component} from 'react';
 
-class Authorizition extends Component {
+class RegistrationForm extends Component {
     render() {
         return (
             <div>
-                Authorizition component
+                RegistrationForm
             </div>
         );
     }
 }
 
-export default Authorizition;
+export default RegistrationForm;

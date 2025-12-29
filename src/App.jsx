@@ -1,7 +1,7 @@
 import './App.css'
 import React from 'react';
 import Main from "./components/pages/Main/Main.jsx";
-import Authorizition from "./components/pages/Authorizition/Authorizition.jsx";
+import Authorization from "./components/pages/Authorizition/Authorization.jsx";
 
 class App extends React.Component {
 
@@ -49,10 +49,8 @@ class App extends React.Component {
   render() {
       return (
           <div className="app-window-container">
-              <div className="app-window">
-                  <Authorizition />
+                  <Authorization />
                   {/*<Main state={this.state} setActiveTab={this.setActiveTab} buyCard={this.buyCard}/>*/}
-              </div>
           </div>
       )
   }
