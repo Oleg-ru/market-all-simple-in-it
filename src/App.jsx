@@ -18,6 +18,20 @@ class App extends React.Component {
         ],
 
         buyCards: [],
+
+        auth: {
+            isSignIn: true,
+        }
+    }
+
+    toggleForm = () => {
+        this.setState(prevState => ({
+            ...prevState,
+            auth: {
+                ...prevState.auth,
+                isSignIn: !prevState.auth.isSignIn
+            }
+        }))
     }
 
     setActiveTab = (activeTab) => {
@@ -49,7 +63,10 @@ class App extends React.Component {
   render() {
       return (
           <div className="app-window-container">
-                  <Authorization />
+                  <Authorization
+                      auth={this.state.auth}
+                      toggleForm={this.toggleForm}
+                  />
                   {/*<Main state={this.state} setActiveTab={this.setActiveTab} buyCard={this.buyCard}/>*/}
           </div>
       )

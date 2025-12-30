@@ -3,6 +3,7 @@ import Button from "../Button/Button.jsx";
 import Input from "../Input/Input.jsx";
 import {Form} from "antd";
 import "./LoginForm.css"
+import signIn from "../../assets/icons/signIn.png"
 
 class LoginForm extends Component {
 
@@ -17,8 +18,11 @@ class LoginForm extends Component {
     render() {
         return (
             <div className="login-form">
+                <div>
+                    <img className="login-form-icon" src={signIn} alt="sign in icon"/>
+                </div>
                 <Form
-                    name="basic"
+                    name="signIn"
                     style={{
                         display: "flex",
                         flexDirection: "column",
