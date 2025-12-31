@@ -13,6 +13,7 @@ class RegistrationForm extends Component {
 
     onFinishFailed = (error) => {
         console.log(error)
+
     }
 
     render() {
