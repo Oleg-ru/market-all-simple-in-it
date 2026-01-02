@@ -2,6 +2,7 @@ import './App.css'
 import React from 'react';
 import Main from "./components/pages/Main/Main.jsx";
 import Authorization from "./components/pages/Authorizition/Authorization.jsx";
+import AppRoutes from "./appRoutes/AppRoutes.jsx";
 
 class App extends React.Component {
 
@@ -63,11 +64,11 @@ class App extends React.Component {
   render() {
       return (
           <div className="app-window-container">
-                  <Authorization
-                      auth={this.state.auth}
-                      toggleForm={this.toggleForm}
-                  />
-                  {/*<Main state={this.state} setActiveTab={this.setActiveTab} buyCard={this.buyCard}/>*/}
+            <AppRoutes state={this.state}
+                       toggleForm={this.toggleForm}
+                       buyCard={this.buyCard}
+                       setActiveTab={this.setActiveTab}
+            />
           </div>
       )
   }

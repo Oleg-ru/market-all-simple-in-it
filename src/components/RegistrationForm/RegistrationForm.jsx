@@ -4,6 +4,7 @@ import signUp from "../../assets/icons/signUpIcon.png"
 import {Form} from "antd";
 import Input from "../Input/Input.jsx";
 import Button from "../Button/Button.jsx";
+import {NavLink} from "react-router";
 
 class RegistrationForm extends Component {
 
@@ -67,9 +68,11 @@ class RegistrationForm extends Component {
                     </Form.Item>
 
                     <Form.Item label={null} style={{margin: "auto"}}>
-                        <Button htmlType="submit">
-                            Sing Up
-                        </Button>
+                        <NavLink to={'/main'}>
+                            <Button htmlType="submit">
+                                Sing Up
+                            </Button>
+                        </NavLink>
                     </Form.Item>
                 </Form>
             </div>

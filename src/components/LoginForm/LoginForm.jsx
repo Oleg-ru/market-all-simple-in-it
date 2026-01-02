@@ -4,6 +4,7 @@ import Input from "../Input/Input.jsx";
 import {Form} from "antd";
 import "./LoginForm.css"
 import signIn from "../../assets/icons/signIn.png"
+import {NavLink} from "react-router";
 
 class LoginForm extends Component {
 
@@ -50,9 +51,11 @@ class LoginForm extends Component {
                     </Form.Item>
 
                     <Form.Item label={null} style={{margin: "auto"}}>
-                        <Button htmlType="submit">
-                            Sing in
-                        </Button>
+                        <NavLink to={'/main'}>
+                            <Button htmlType="submit">
+                                Sing in
+                            </Button>
+                        </NavLink>
                     </Form.Item>
                 </Form>
             </div>
